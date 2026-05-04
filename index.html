@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plugs R Us – Premium Adult Boutique</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Age Gate -->
+  <div id="age-gate" class="age-gate">
+    <div class="age-gate__box">
+      <h1>Plugs R Us</h1>
+      <p>This website contains adult content intended for individuals 18 years of age or older.</p>
+      <p>By entering you confirm you are at least 18 years old.</p>
+      <div class="age-gate__actions">
+        <button id="age-gate-enter" class="btn btn--primary btn--lg">I am 18 or older – Enter</button>
+        <a href="https://www.google.com" class="btn btn--ghost btn--lg">I am under 18 – Leave</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site wrapper (hidden until age gate is passed) -->
+  <div id="site" class="site hidden">
+
+    <!-- Header -->
+    <header class="header">
+      <div class="container header__inner">
+        <a href="index.html" class="logo">
+          <span class="logo__plug">🔌</span>
+          <span class="logo__text">Plugs <em>R</em> Us</span>
+        </a>
+        <nav class="nav">
+          <a href="#shop" class="nav__link">Shop</a>
+          <a href="#bestsellers" class="nav__link">Best Sellers</a>
+          <a href="#about" class="nav__link">About</a>
+          <a href="#contact" class="nav__link">Contact</a>
+        </nav>
+        <div class="header__actions">
+          <button class="cart-btn" id="cart-toggle" aria-label="Open cart">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+            </svg>
+            <span class="cart-btn__count" id="cart-count">0</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <p class="hero__eyebrow">Premium Adult Boutique</p>
+          <h2 class="hero__title">Find Your Perfect Fit</h2>
+          <p class="hero__subtitle">Curated body-safe toys for every experience level. Discreet shipping, always.</p>
+          <a href="#shop" class="btn btn--primary btn--lg">Shop Now</a>
+        </div>
+        <div class="hero__art">
+          <div class="hero__badge">🔞 Adults Only</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust bar -->
+    <div class="trust-bar">
+      <div class="container trust-bar__inner">
+        <div class="trust-item">
+          <span class="trust-item__icon">📦</span>
+          <span>Discreet Packaging</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-item__icon">🔒</span>
+          <span>Secure Checkout</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-item__icon">✅</span>
+          <span>Body-Safe Materials</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-item__icon">🚚</span>
+          <span>Free Shipping $75+</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-item__icon">↩️</span>
+          <span>30-Day Returns</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Best Sellers -->
+    <section class="section" id="bestsellers">
+      <div class="container">
+        <h2 class="section__title">Best Sellers</h2>
+        <div class="product-grid" id="bestseller-grid"></div>
+      </div>
+    </section>
+
+    <!-- Shop – Full Catalog -->
+    <section class="section section--alt" id="shop">
+      <div class="container">
+        <h2 class="section__title">Full Catalog</h2>
+        <div class="filter-bar">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="beginner">Beginner</button>
+          <button class="filter-btn" data-filter="intermediate">Intermediate</button>
+          <button class="filter-btn" data-filter="advanced">Advanced</button>
+          <button class="filter-btn" data-filter="vibrating">Vibrating</button>
+          <button class="filter-btn" data-filter="jeweled">Jeweled</button>
+        </div>
+        <div class="product-grid" id="catalog-grid"></div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="container about__inner">
+        <div class="about__copy">
+          <h2 class="section__title">About Plugs R Us</h2>
+          <p>We're a small, passionate adult boutique dedicated to making body-safe pleasure products accessible to everyone. Every item in our catalog is made from body-safe silicone, stainless steel, or glass — never cheap materials that could cause harm.</p>
+          <p>We believe in discretion, inclusivity, and education. Our team hand-selects every product and provides honest descriptions so you can shop with confidence.</p>
+          <ul class="about__values">
+            <li>✅ All products rigorously vetted for body safety</li>
+            <li>✅ Plain brown box, no identifying labels</li>
+            <li>✅ Inclusive sizing guides for all experience levels</li>
+            <li>✅ LGBTQ+ friendly and sex-positive</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section section--alt" id="contact">
+      <div class="container">
+        <h2 class="section__title">Contact Us</h2>
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-row">
+            <label for="cf-name">Name</label>
+            <input id="cf-name" type="text" placeholder="Your name" required />
+          </div>
+          <div class="form-row">
+            <label for="cf-email">Email</label>
+            <input id="cf-email" type="email" placeholder="you@example.com" required />
+          </div>
+          <div class="form-row">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" rows="5" placeholder="How can we help?" required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary">Send Message</button>
+          <p class="form-success hidden" id="form-success">Thanks! We'll be in touch within 24 hours.</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__brand">
+          <span class="logo__plug">🔌</span>
+          <span class="logo__text">Plugs <em>R</em> Us</span>
+          <p>Premium adult boutique. Body-safe. Discreet. Inclusive.</p>
+        </div>
+        <div class="footer__links">
+          <h4>Shop</h4>
+          <a href="#shop">All Products</a>
+          <a href="#bestsellers">Best Sellers</a>
+        </div>
+        <div class="footer__links">
+          <h4>Info</h4>
+          <a href="#about">About Us</a>
+          <a href="#contact">Contact</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Shipping &amp; Returns</a>
+        </div>
+        <div class="footer__links">
+          <h4>Legal</h4>
+          <p class="footer__legal">Must be 18+ to purchase. All sales are final on used or opened items. We do not sell personal data.</p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="container">© 2026 Plugs R Us. All rights reserved. Adults only (18+).</div>
+      </div>
+    </footer>
+
+  </div><!-- /site -->
+
+  <!-- Cart Drawer -->
+  <div class="cart-drawer" id="cart-drawer">
+    <div class="cart-drawer__header">
+      <h3>Your Cart</h3>
+      <button id="cart-close" aria-label="Close cart">&times;</button>
+    </div>
+    <div class="cart-drawer__items" id="cart-items"></div>
+    <div class="cart-drawer__footer">
+      <div class="cart-total">
+        Total: <strong id="cart-total">$0.00</strong>
+      </div>
+      <button class="btn btn--primary btn--full" id="checkout-btn">Checkout</button>
+    </div>
+  </div>
+  <div class="cart-overlay" id="cart-overlay"></div>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast"></div>
+
+  <script src="js/products.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
