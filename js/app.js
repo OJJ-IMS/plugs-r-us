@@ -142,8 +142,8 @@ function renderCard(product) {
     : '';
 
   card.innerHTML = `
-    ${product.badge ? `<span class="product-badge" style="background:${product.color}">${product.badge}</span>` : ''}
-    <div class="product-card__emoji" style="background:${product.color}22">${product.emoji}</div>
+    ${product.badge ? `<span class="product-badge${product.badgeGold ? ' product-badge--gold' : ''}">${product.badge}</span>` : ''}
+    <div class="product-card__emoji">${product.emoji}</div>
     <div class="product-card__body">
       <h3 class="product-card__name">${product.name}</h3>
       <p class="product-card__tagline">${product.tagline}</p>
